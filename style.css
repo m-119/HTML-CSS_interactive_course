@@ -1,0 +1,216 @@
+body {
+    background: #f8f8f8
+}
+
+
+/*
+а. Для всех ссылок меню задать определённый стиль (Цвет текста, размер шрифта, начертание шрифта и т.д.)
+b. Убрать маркеры списка.
+*/
+
+.menu>*>a {
+    border-bottom-style: solid;
+    border-bottom-right-radius: 6px;
+    border-bottom-color: darkorange;
+    font-style: italic;
+    text-decoration: none;
+}
+
+
+/*
+Добавление контента на страницу, создание первых блоков и эффектов на ссылки сайта:
+1. При наведении на меню сайта цвет ссылок должен меняться на произвольный.
+*/
+
+.menu>*>a:hover {
+    border-bottom-color: aqua;
+    border-bottom-style: solid;
+    border-bottom-right-radius: 6px;
+    border-bottom-color: gold;
+    font-style: italic;
+    color: blue;
+    text-decoration: none;
+}
+
+ul.menu {
+    list-style: none;
+    line-height: 20px;
+    position: relative;
+    top: 15px;
+    left: -30px;
+}
+
+.sn {
+    font-family: cursive;
+    font-size: -webkit-xxx-large;
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, .5);
+}
+
+[alt="logo"] {
+    width: 100px;
+    margin: 0px 0px -30px 10px;
+}
+
+.header {
+    background: #fc0;
+    margin: -21px -8px -8px -8px;
+    padding: 1px;
+}
+
+.header>div {
+    display: inline-block;
+}
+
+.header h1 {
+    padding-left: 20px;
+}
+
+.item {
+    background: Snow;
+}
+
+#Ya {
+    color: DarkRed;
+}
+
+.image_x {
+    max-width: 100px;
+    max-height: 100px;
+}
+
+.item>*>.image_x {
+    box-shadow: 0 0 3px rgba(0, 0, 0, .5);
+}
+
+
+/*
+Добавление контента на страницу, создание первых блоков и эффектов на ссылки сайта:
+7. При наведении на изображения в разделе просмотра товара, подробного описания, необходимо сделать так, чтобы рамка исчезала, но сама картинка при этом не должна смещаться, т.е., должна оставаться неподвижной.
+*/
+
+.item>*>.image_x:hover {
+    box-shadow: 0 0 0px rgba(0, 0, 0, 0);
+}
+
+
+/*
+Добавление контента на страницу, создание первых блоков и эффектов на ссылки сайта:
+8.На странице просмотра товара каталога в каждом параграфе сделать первую букву первого слова другим шрифтом и размером.
+*/
+
+.item>*~p:first-letter {
+    font-family: cursive;
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.property {
+    list-style-image: url(img/4list_ok.png);
+}
+
+.tech_property {
+    width: 100%;
+}
+
+
+/*
+Добавление контента на страницу, создание первых блоков и эффектов на ссылки сайта:
+11. *Задать высоту для верхней строки таблицы, отличную от всех остальных.
+*/
+
+.tech_property>*>*>th {
+    height: 30px;
+}
+
+.tech_property>*>*>th:nth-child(1) {
+    width: 40%;
+}
+
+.content {
+    margin-top: 20px;
+}
+
+.content>div {
+    margin: 20px;
+    width: 100px;
+    height: 100px;
+    border-width: 2px;
+    border-color: blanchedalmond;
+    background: white;
+    float: left;
+    text-align: center;
+}
+
+.footer {
+    width: 100%;
+    float: left;
+}
+
+
+/*
+a. Заголовки (Краткое описание товара, Характеристики, Подробное описание товара):
+    * Цвет текста черный.
+    * Размер шрифта 18px.
+    * Насыщенность шрифта 400. (font-weight).
+    * Установите цвет фона #eaeaea.
+*/
+
+h3 {
+    color: black;
+    font-size: 18px;
+    font-weight: 400;
+    background: #eaeaea;
+}
+
+
+/*
+b. Для краткого описания товара:
+    Цвет текста #707070.
+    Размер шрифта 14px.
+    Начертание шрифта italic. (font-style).
+    Высоту текста 16px (line-height).
+*/
+
+.description_s {
+    color: #707070;
+    font-size: 14px;
+    font-style: italic;
+    line-height: 16px;
+}
+
+
+/*
+c. Для подробного описания товара:
+    Цвет текста #484343.
+    Размер шрифта 16px.
+    Насыщенность шрифта 400. (font-weight).
+    Высоту текста 24px (line-height).
+    Расположение текста по левому краю (text-align).
+*/
+
+.description {
+    color: #434343;
+    font-size: 16px;
+    font-weight: 400;
+    font-style: italic;
+    line-height: 16px;
+    text-align: left;
+}
+
+.contacts>form>* {
+    width: 500px;
+    padding: 0 0 0 0;
+    margin: 0px;
+    border-width: 1px;
+    resize: none;
+}
+
+
+/*
+Добавление контента на страницу, создание первых блоков и эффектов на ссылки сайта:
+5. При вводе текста в текстовые поля каждое слово должно начинаться с большой буквы, даже если пользователь будет вводить с маленькой.
+*/
+
+.contacts>form>*:first-of-type {
+    text-transform: capitalize;
+}
