@@ -272,16 +272,6 @@ form>*:focus {
 /*Создание блочной структуры сайта, позиционирование элементов
 1. Создать родительский блок с классом container, задать значение ширины и расположить блок по центру экрана.*/
 
-.container {
-    width: 80%;
-    position: relative;
-    top: 50%;
-    left: 50%;
-    margin-right: -50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-}
-
 .buy {
     font-weight: 700;
     color: white;
@@ -300,4 +290,13 @@ form>*:focus {
 .buy:active {
     background: rgb(147, 33, 90);
     box-shadow: 0 3px rgb(147, 33, 90) inset;
+}
+
+.container {
+    max-width: 1024px;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -0%);
 }
