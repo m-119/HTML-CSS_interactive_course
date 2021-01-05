@@ -121,7 +121,7 @@ ul.menu li {
 7. При наведении на изображения в разделе просмотра товара, подробного описания, необходимо сделать так, чтобы рамка исчезала, но сама картинка при этом не должна смещаться, т.е., должна оставаться неподвижной.
 */
 
-.item>.content>.img_catalog div:hover {
+.item>*>.content>.img_catalog div:hover {
     box-shadow: 0 0 2px rgba(0, 0, 0, .2);
     outline: none;
 }
@@ -132,7 +132,7 @@ ul.menu li {
 8.На странице просмотра товара каталога в каждом параграфе сделать первую букву первого слова другим шрифтом и размером.
 */
 
-.item>*~p:first-letter {
+.item>.container>*>p:first-letter {
     font-family: cursive;
     font-weight: 600;
     font-size: 20px;
@@ -246,11 +246,12 @@ c. Для подробного описания товара:
     text-align: left;
 }
 
-.contacts>form>* {
-    width: 500px;
+.contacts>*>form>* {
+    width: 100%;
     padding: 0 0 0 0;
     margin: 0px;
-    border-width: 1px;
+    border-style: none;
+    outline: 1px solid #333;
     resize: none;
 }
 
@@ -260,7 +261,7 @@ c. Для подробного описания товара:
 5. При вводе текста в текстовые поля каждое слово должно начинаться с большой буквы, даже если пользователь будет вводить с маленькой.
 */
 
-.contacts>form>*:first-of-type {
+.contacts>*>form>*:first-of-type {
     text-transform: capitalize;
 }
 
