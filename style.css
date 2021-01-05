@@ -38,23 +38,54 @@ ul.menu {
     position: relative;
     top: 15px;
     left: -30px;
+    margin-right: 0px;
+    /*Создание блочной структуры сайта, позиционирование элементов
+    5. Разместить меню справа от логотипа.
+    6. Прижать меню к правому краю.*/
+    float: right;
+}
+
+ul.menu li {
+    /*
+    Добавление контента на страницу, создание первых блоков и эффектов на ссылки сайта:
+    4. Из вертикального меню сделать горизонтальное.
+    5. Разместить меню справа от логотипа.
+    */
+    float: left;
+    margin-left: 10px;
 }
 
 .sn {
     font-family: cursive;
-    font-size: -webkit-xxx-large;
+    font-size: 48px;
+    display: inline-block;
+    line-height: 105px;
     text-shadow: 3px 3px 5px rgba(0, 0, 0, .5);
 }
 
-[alt="logo"] {
+.logo {
     width: 100px;
-    margin: 0px 0px -30px 10px;
+    height: 100px;
+    background: url(img/icon.png) no-repeat;
+    background-size: 100px;
+    float: left;
+    /*
+    Создание блочной структуры сайта, позиционирование элементов
+    3. Отодвинуть логотип от верхнего и левого края.
+    */
+    margin: 10px 0px 0px 10px;
 }
 
 .header {
     background: #fc0;
-    margin: -21px -8px -8px -8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .5);
+    margin: -8px -8px 20px -8px;
     padding: 1px;
+    /*
+    Создание блочной структуры сайта, позиционирование элементов
+    2. Задать блоку с классом header значение высоты.
+    */
+    height: 190px;
 }
 
 .header>div {
@@ -78,8 +109,10 @@ ul.menu {
     max-height: 100px;
 }
 
-.item>*>.image_x {
-    box-shadow: 0 0 3px rgba(0, 0, 0, .5);
+.img_catalog div {
+    box-shadow: 0 0 10px rgba(0, 0, 0, .5);
+    outline: 1px solid #666;
+    margin-bottom: 5px;
 }
 
 
@@ -88,8 +121,9 @@ ul.menu {
 7. При наведении на изображения в разделе просмотра товара, подробного описания, необходимо сделать так, чтобы рамка исчезала, но сама картинка при этом не должна смещаться, т.е., должна оставаться неподвижной.
 */
 
-.item>*>.image_x:hover {
-    box-shadow: 0 0 0px rgba(0, 0, 0, 0);
+.item>.content>.img_catalog div:hover {
+    box-shadow: 0 0 2px rgba(0, 0, 0, .2);
+    outline: none;
 }
 
 
@@ -105,7 +139,7 @@ ul.menu {
 }
 
 .property {
-    list-style-image: url(img/4list_ok.png);
+    list-style-image: url(./img/4list_ok.png);
 }
 
 .tech_property {
@@ -126,11 +160,7 @@ ul.menu {
     width: 40%;
 }
 
-.content {
-    margin-top: 20px;
-}
-
-.content>div {
+.content>div.img_catalog {
     margin: 20px;
     width: 100px;
     height: 100px;
@@ -142,7 +172,24 @@ ul.menu {
 }
 
 .footer {
+    /*Создание блочной структуры сайта, позиционирование элементов
+    1. Задать высоту.
+    2. Поменять цвет фона.
+    */
     width: 100%;
+    float: left;
+    background: rgb(100, 100, 100, .1);
+    text-align: right;
+    margin-top: 20px;
+}
+
+.property {
+    clear: both;
+}
+
+.short {
+    width: calc(100% - 140px);
+    height: 100px;
     float: left;
 }
 
@@ -160,6 +207,8 @@ h3 {
     font-size: 18px;
     font-weight: 400;
     background: #eaeaea;
+    display: inline-block;
+    width: 100%
 }
 
 
@@ -213,4 +262,37 @@ c. Для подробного описания товара:
 
 .contacts>form>*:first-of-type {
     text-transform: capitalize;
+}
+
+form>*:focus{
+    background: #b3deff;
+}
+
+/*Создание блочной структуры сайта, позиционирование элементов
+1. Создать родительский блок с классом container, задать значение ширины и расположить блок по центру экрана.*/
+
+.container {
+    width: 80%;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.buy {
+  font-weight: 700;
+  color: white;
+  text-decoration: none;
+  padding: .1em 1em 3px;
+  border-radius: 3px;
+  background: rgb(199,64,129);
+  box-shadow: 0 -3px rgb(167,53,110) inset;
+  transition: 0.2s;
+}
+.buy:hover { background: rgb(167, 53, 110); }
+.buy:active {
+  background: rgb(147,33,90);
+  box-shadow: 0 3px rgb(147,33,90) inset;
 }
