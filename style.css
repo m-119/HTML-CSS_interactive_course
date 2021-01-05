@@ -264,9 +264,10 @@ c. Для подробного описания товара:
     text-transform: capitalize;
 }
 
-form>*:focus{
+form>*:focus {
     background: #b3deff;
 }
+
 
 /*Создание блочной структуры сайта, позиционирование элементов
 1. Создать родительский блок с классом container, задать значение ширины и расположить блок по центру экрана.*/
@@ -282,17 +283,21 @@ form>*:focus{
 }
 
 .buy {
-  font-weight: 700;
-  color: white;
-  text-decoration: none;
-  padding: .1em 1em 3px;
-  border-radius: 3px;
-  background: rgb(199,64,129);
-  box-shadow: 0 -3px rgb(167,53,110) inset;
-  transition: 0.2s;
+    font-weight: 700;
+    color: white;
+    text-decoration: none;
+    padding: .1em 1em 3px;
+    border-radius: 3px;
+    background: rgb(199, 64, 129);
+    box-shadow: 0 -3px rgb(167, 53, 110) inset;
+    transition: 0.2s;
 }
-.buy:hover { background: rgb(167, 53, 110); }
+
+.buy:hover {
+    background: rgb(167, 53, 110);
+}
+
 .buy:active {
-  background: rgb(147,33,90);
-  box-shadow: 0 3px rgb(147,33,90) inset;
+    background: rgb(147, 33, 90);
+    box-shadow: 0 3px rgb(147, 33, 90) inset;
 }
